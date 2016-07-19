@@ -1,8 +1,11 @@
 <div ng-app="badReddit" ng-controller="mainCtrl">
 	{{ test }}
+	<div ng-repeat="post in posts | orderBy: '-upvotes'">
+		{{ post.title }} - upvotes: {{ post.upvotes}}
+	</div>
 </div>
 
 <!-- modules -->
-<script src="app.js" type="text/javascript"></script>
+<script src="assets/javascripts/app.js" type="text/javascript"></script>
 <!-- controllers -->
-<script src="controller.js" type="text/javascript"></script>
+<script src="assets/javascripts/controller.js" type="text/javascript"></script>
